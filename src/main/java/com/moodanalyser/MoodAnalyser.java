@@ -2,22 +2,22 @@ package com.moodanalyser;
 
 public class MoodAnalyser {
 	
-	private String msg;
-    public MoodAnalyser() {
-    }
+	 private String msg;
+	    public MoodAnalyser() {
+	    }
 
-    public MoodAnalyser(String msg){
-        this.msg = msg;
-    }
+	    public MoodAnalyser(String msg){
+	        this.msg = msg;
+	    }
 
-    public String analyzeMood() {
-        try {
-            if(msg.contains("Sad")){
-                return "Sad";
-            }
-            return "Happy";
-        }catch (NullPointerException e){
-            return "Happy";
-        }
-    }
+	    public String analyzeMood() throws MoodAnalysisException{
+	        try {
+	            if(msg.contains("Sad")){
+	                return "Sad";
+	            }
+	            return "Happy";
+	        }catch (NullPointerException e){
+	            return "Happy";
+	        }
+	    }
 }
